@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Main </title>
+    <!-- tailwind css  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--  -->
+    <script src="https://kit.fontawesome.com/a55bd9149b.js" crossorigin="anonymous"></script>
+    <!--  -->
+</head>
+
+<body class="bg-gray-700 ">
+    <section class="max-w-lg min-h-screen mx-auto  bg-white p-2">
+        <!--  -->
+        <header class="border-b pb-2">
+            <nav class="mt-2">
+                <div class="flex justify-around items-center">
+                    <img class="w-34" src="images/Group.png" alt="">
+                    <div class="text-center items-center hover:text-red-500">
+                        <h2 class="font-bold text-2xl text-orange-600"> $ <span id="main-balance">450</span></h2>
+                        <p class="border p-1 rounded-lg"> Available Balance </p>
+                    </div>
+                    <button class="btn bg-white hover:text-red-500"> <i class="fa-solid fa-right-from-bracket"></i> Log
+                        Out </button>
+                </div>
+            </nav>
+        </header>
+        <!-- section -->
+        <section class=" my-6">
+            <div class="py-4 space-y-3 mx-6">
+                <h2 class='text-3xl font-bold'>🔥 Welcome to Payooo! </h2>
+                <p> Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+            </div>
+        </section>
+
+        <!-- section card section -->
+        <section>
+            <div class="cards grid grid-cols-3 gap-4 mx-6">
+                <!-- Add Money -->
+                <div id="add-money-box" class="box cursor-pointer border p-4 text-center rounded-lg space-y-2">
+                    <img class="w-8 mx-auto " src="images/Add Money.png" alt="">
+                    <p> Add Money </p>
+                </div>
+                <!-- Cashout-->
+                <div id="cash-out-box" class="box cursor-pointer border p-4 text-center rounded-lg space-y-2">
+                    <img class="w-8 mx-auto " src="images/Cash Out.png" alt="">
+                    <p> Cashout </p>
+                </div>
+                <!-- Transfer Money -->
+                <div class="box cursor-pointer border p-4 text-center rounded-lg space-y-2">
+                    <img class="w-8 mx-auto " src="images/transfer Money.png" alt="">
+                    <p> Transfer Money </p>
+                </div>
+                <!-- Get Bonus -->
+                <div class="box cursor-pointer border p-4 text-center rounded-lg space-y-2">
+                    <img class="w-8 mx-auto " src="images/get Bonus.png" alt="">
+                    <p> Get Bonus </p>
+                </div>
+                <!-- Pay Bill -->
+                <div class="box cursor-pointer border p-4 text-center rounded-lg space-y-2">
+                    <img class="w-8 mx-auto " src="images/paybill.png" alt="">
+                    <p> Pay Bill </p>
+                </div>
+                <!-- Transactions -->
+                <div class="box cursor-pointer border p-4 text-center rounded-lg space-y-2">
+                    <img class="w-8 mx-auto " src="images/Transactions.png" alt="">
+                    <p> Transactions </p>
+                </div>
+            </div>
+        </section>
+        <!-- add money section -->
+        <section id="addmoney">
+            <h3 class="p-4 text-3xl font-bold pl-6"> Add Money </h3>
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto">
+                <form class="card-body">
+                    <div class="form-control">
+                        <!-- bank select -->
+                        <fieldset class="fieldset">
+                            <legend class="fieldset-legend">Select A Bank</legend>
+                            <select class="select w-full input-bordered">
+                                <option disabled selected>Select back</option>
+                                <option>Bkash</option>
+                                <option>Nagad</option>
+                                <option>DBBL</option>
+                                <option>BRAK BANK</option>
+                            </select>
+                        </fieldset>
+                        <!-- bank account number  -->
+                        <label class="label">
+                            <span class="label-text">Bank Account Number</span>
+                        </label>
+                        <input value="01712256698" id="account-number" type="number" placeholder="Enter 11 digit account number" class="input input-bordered"
+                            required />
+                        <!-- Add amount -->
+                        <label class="label">
+                            <span class="label-text">Amount to Add</span>
+                        </label>
+                        <input id="amount" type="number" placeholder="Add Amount to withdraw" class="input input-bordered"
+                            required />
+                    </div>
+                    <!-- pin  -->
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Pin Number</span>
+                        </label>
+                        <input id="pinNumber" value="1234" type="number" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
+                    </div>
+                    <!-- button  -->
+                    <div class="form-control mt-6">
+                        <button id="add-money-btn" class="btn btn-primary w-full">Add Money</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- cash Out section -->
+        <section id="cashout">
+            <h3 class="p-4 text-3xl font-bold pl-6"> Cash Out </h3>
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto">
+                <form class="card-body">
+                    <div class="form-control">
+                        <!-- bank select -->
+                        <fieldset class="fieldset">
+                            <legend class="fieldset-legend">Select A Bank</legend>
+                            <select class="select w-full input-bordered">
+                                <option disabled selected>Select back</option>
+                                <option>Bkash</option>
+                                <option>Nagad</option>
+                                <option>DBBL</option>
+                                <option>BRAK BANK</option>
+                            </select>
+                        </fieldset>
+                        <!-- bank account number  -->
+                        <label class="label">
+                            <span class="label-text">Agent Number</span>
+                        </label>
+                        <input id="account-number" value="01712256698" type="number" placeholder="Enter 11 digit account number" class="input input-bordered"
+                            required />
+                        <!-- Add amount -->
+                        <label class="label">
+                            <span class="label-text">Amount to Add</span>
+                        </label>
+                        <input id="cahsout-amount" type="number" placeholder="Add Amount to withdraw" class="input input-bordered"
+                            required />
+                    </div>
+                    <!-- pin  -->
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Pin Number</span>
+                        </label>
+                        <input id="cashout-pin" value="1234" type="number" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
+                    </div>
+                    <!-- button  -->
+                    <div class="form-control mt-6">
+                        <button id="cashout-btn" class="btn btn-primary w-full">Withdraw Money</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </section>
+    <script src="utilities/utilities.js"></script>
+    <script src="js/addmoney.js"></script>
+    <script src="utilities/togglle.js"></script>
+    <script src="js/cashOut.js"></script>
+</body>
+
+</html>
