@@ -66,7 +66,7 @@
                     <p> Pay Bill </p>
                 </div>
                 <!-- Transactions -->
-                <div class="box cursor-pointer border p-4 text-center rounded-lg space-y-2">
+                <div id="transaction-box" class="box cursor-pointer border p-4 text-center rounded-lg space-y-2">
                     <img class="w-8 mx-auto " src="images/Transactions.png" alt="">
                     <p> Transactions </p>
                 </div>
@@ -81,7 +81,7 @@
                         <!-- bank select -->
                         <fieldset class="fieldset">
                             <legend class="fieldset-legend">Select A Bank</legend>
-                            <select class="select w-full input-bordered">
+                            <select id="allbank" class="select w-full input-bordered">
                                 <option disabled selected>Select back</option>
                                 <option>Bkash</option>
                                 <option>Nagad</option>
@@ -160,11 +160,21 @@
                 </form>
             </div>
         </section>
+        <!-- transaction history -->
+         <section id="transaction-history"> 
+            <h2 class="text-2xl font-bold text-red-500 text-center p-3"> transaction history </h2>
+                <div id="transaction-container" class="border p-4">
+
+                </div>
+         </section>
     </section>
     <script src="utilities/utilities.js"></script>
     <script src="js/addmoney.js"></script>
     <script src="utilities/togglle.js"></script>
     <script src="js/cashOut.js"></script>
+    <script src="js/transaction.js"></script>
+
+    
 </body>
 
 </html>
